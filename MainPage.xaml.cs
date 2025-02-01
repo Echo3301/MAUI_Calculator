@@ -63,8 +63,13 @@ namespace MAUICalculator
             _isNewCalculation = true;
             Display.Text = ""; 
         }
-            //For the equals button to perform the calculation
-            private void CalculateWhenClicked(object sender, EventArgs e)
+            private void Slider_ScaleValue(object sender, ValueChangedEventArgs e)
+        {
+            double scale = e.NewValue;
+            CalculatorFrame.Scale = scale;
+        }
+        //For the equals button to perform the calculation
+        private void CalculateWhenClicked(object sender, EventArgs e)
             {
                 if (_currentInput != "" && _previousValue != 0)
                 {
