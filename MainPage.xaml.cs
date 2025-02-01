@@ -77,15 +77,13 @@ namespace MAUICalculator
         }
         private void SetRainbowTheme()
         {
-            //Set as default theme as xaml is
-            // Use the same color values from XAML
-            Display.BackgroundColor = Color.FromRgba("#A1C3E3");  // Color for display background
-            Display.TextColor = Color.FromRgba("#FFFFFF");  // Text color for display
+            Display.BackgroundColor = Color.FromRgba("#A1C3E3");  //Color for display background
+            Display.TextColor = Color.FromRgba("#FFFFFF");  //Text color for display
 
-            // Set the frame background for the dark theme
-            CalculatorFrame.BackgroundColor = Color.FromRgba("#22CB29");  // Frame background color
+            //Frame background
+            CalculatorFrame.BackgroundColor = Color.FromRgba("#22CB29");  //Frame background color
 
-            // Set button background colors for dark theme
+            //Button background colors
             SetButtonsTheme(Color.FromRgba("#F3A53F"), //b1
                             Color.FromRgba("#EEDD38"), //b2
                             Color.FromRgba("#A6E72D"), //b3
@@ -110,10 +108,10 @@ namespace MAUICalculator
             Display.BackgroundColor = Color.FromRgba("#FFBEABAB");
             Display.TextColor = Color.FromRgba("#000000");
 
-            // Set the frame background for the dark theme
+            //Frame background
             CalculatorFrame.BackgroundColor = Color.FromRgba("#FF413D3D");
 
-            // Set button background colors for dark theme
+            //Button background colors
             SetButtonsTheme(Color.FromRgba("#F3A53F"), Color.FromRgba("#F3A53F"), Color.FromRgba("#F3A53F"), Color.FromRgba("#F3A53F"),
                 Color.FromRgba("#F3A53F"), Color.FromRgba("#F3A53F"), Color.FromRgba("#F3A53F"), Color.FromRgba("#F3A53F"),
                 Color.FromRgba("#F3A53F"), Color.FromRgba("#F3A53F"), Color.FromRgba("#F3A53F"), Color.FromRgba("#F3A53F"),
