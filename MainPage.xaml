@@ -3,11 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAUICalculator.MainPage">
 
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+
+        <Switch x:Name="Dark_mode" IsToggled="True" HorizontalOptions="Center" Toggled="OnSwitchColor"/>
+
         <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto" 
-              ColumnDefinitions="Auto, Auto, Auto, Auto" 
+              ColumnDefinitions="Auto, Auto, Auto, Auto, Auto" 
               VerticalOptions="Center" 
               HorizontalOptions="Center">
-        
+
             <Frame CornerRadius="20" 
                    x:Name="CalculatorFrame"
                    Padding="10"
@@ -16,11 +20,11 @@
                    HorizontalOptions="Center" 
                    BackgroundColor="#22CB29">
 
-            <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto" 
+                <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto" 
                   ColumnDefinitions="Auto, Auto, Auto, Auto">
 
-                <!-- Display area -->
-                <Entry x:Name="Display" 
+                    <!-- Display area -->
+                    <Entry x:Name="Display" 
                        Grid.Row="0" 
                        Grid.Column="0" 
                        Grid.ColumnSpan="4" 
@@ -30,34 +34,34 @@
                        IsReadOnly="True" 
                        TextColor="Black" Background="#A1C3E3" MaximumHeightRequest="45" />
 
-                <!-- First row buttons -->
-                <Button Text="1" Clicked="NumEntry_Clicked" Grid.Row="1" Grid.Column="0" BackgroundColor="#F3A53F" />
-                <Button Text="2" Clicked="NumEntry_Clicked" Grid.Row="1" Grid.Column="1" BackgroundColor="#EEDD38" />
-                <Button Text="3" Clicked="NumEntry_Clicked" Grid.Row="1" Grid.Column="2" BackgroundColor="#A6E72D" />
-                <Button Text="+" Clicked="OperatorEntry_Clicked" Grid.Row="1" Grid.Column="3" BackgroundColor="#53E74F" />
+                    <!-- First row buttons -->
+                    <Button x:Name="btn1" Text="1" Clicked="NumEntry_Clicked" Grid.Row="1" Grid.Column="0" BackgroundColor="#F3A53F" />
+                    <Button x:Name="btn2" Text="2" Clicked="NumEntry_Clicked" Grid.Row="1" Grid.Column="1" BackgroundColor="#EEDD38" />
+                    <Button x:Name="btn3" Text="3" Clicked="NumEntry_Clicked" Grid.Row="1" Grid.Column="2" BackgroundColor="#A6E72D" />
+                    <Button x:Name="btnAdd" Text="+" Clicked="OperatorEntry_Clicked" Grid.Row="1" Grid.Column="3" BackgroundColor="#53E74F" />
 
-                <!-- Second row buttons -->
-                <Button Text="4" Clicked="NumEntry_Clicked" Grid.Row="2" Grid.Column="0" BackgroundColor="#40EED0" />
-                <Button Text="5" Clicked="NumEntry_Clicked" Grid.Row="2" Grid.Column="1" BackgroundColor="#48C1EE" />
-                <Button Text="6" Clicked="NumEntry_Clicked" Grid.Row="2" Grid.Column="2" BackgroundColor="#4385EE" />
-                <Button Text="-" Clicked="OperatorEntry_Clicked" Grid.Row="2" Grid.Column="3" BackgroundColor="#2E66DA" />
+                    <!-- Second row buttons -->
+                    <Button x:Name="btn4" Text="4" Clicked="NumEntry_Clicked" Grid.Row="2" Grid.Column="0" BackgroundColor="#40EED0" />
+                    <Button x:Name="btn5" Text="5" Clicked="NumEntry_Clicked" Grid.Row="2" Grid.Column="1" BackgroundColor="#48C1EE" />
+                    <Button x:Name="btn6" Text="6" Clicked="NumEntry_Clicked" Grid.Row="2" Grid.Column="2" BackgroundColor="#4385EE" />
+                    <Button x:Name="btnSub" Text="-" Clicked="OperatorEntry_Clicked" Grid.Row="2" Grid.Column="3" BackgroundColor="#2E66DA" />
 
-                <!-- Third row buttons -->
-                <Button Text="7" Clicked="NumEntry_Clicked" Grid.Row="3" Grid.Column="0" BackgroundColor="#9F69E6" />
-                <Button Text="8" Clicked="NumEntry_Clicked" Grid.Row="3" Grid.Column="1" BackgroundColor="#E372E7" />
-                <Button Text="9" Clicked="NumEntry_Clicked" Grid.Row="3" Grid.Column="2" BackgroundColor="#DB53B5" />
-                <Button Text="*" Clicked="OperatorEntry_Clicked" Grid.Row="3" Grid.Column="3" BackgroundColor="#E635BA" />
+                    <!-- Third row buttons -->
+                    <Button x:Name="btn7" Text="7" Clicked="NumEntry_Clicked" Grid.Row="3" Grid.Column="0" BackgroundColor="#9F69E6" />
+                    <Button x:Name="btn8" Text="8" Clicked="NumEntry_Clicked" Grid.Row="3" Grid.Column="1" BackgroundColor="#E372E7" />
+                    <Button x:Name="btn9" Text="9" Clicked="NumEntry_Clicked" Grid.Row="3" Grid.Column="2" BackgroundColor="#DB53B5" />
+                    <Button x:Name="btnMult" Text="*" Clicked="OperatorEntry_Clicked" Grid.Row="3" Grid.Column="3" BackgroundColor="#E635BA" />
 
-                <!-- Fourth row buttons -->
-                <Button Text="," Clicked="NumEntry_Clicked" Grid.Row="4" Grid.Column="0" BackgroundColor="#E25682" />
-                <Button Text="0" Clicked="NumEntry_Clicked" Grid.Row="4" Grid.Column="1" BackgroundColor="#E62D5C" />
-                <Button Text="C" Clicked="OperatorEntry_Clicked" Grid.Row="4" Grid.Column="2" BackgroundColor="#D82642" />
-                <Button Text="/" Clicked="OperatorEntry_Clicked" Grid.Row="4" Grid.Column="3" BackgroundColor="#EA0C0C" />
+                    <!-- Fourth row buttons -->
+                    <Button x:Name="btnDot" Text="," Clicked="NumEntry_Clicked" Grid.Row="4" Grid.Column="0" BackgroundColor="#E25682" />
+                    <Button x:Name="btn0" Text="0" Clicked="NumEntry_Clicked" Grid.Row="4" Grid.Column="1" BackgroundColor="#E62D5C" />
+                    <Button x:Name="btnC" Text="C" Clicked="OperatorEntry_Clicked" Grid.Row="4" Grid.Column="2" BackgroundColor="#D82642" />
+                    <Button x:Name="btnDiv" Text="/" Clicked="OperatorEntry_Clicked" Grid.Row="4" Grid.Column="3" BackgroundColor="#EA0C0C" />
 
-                <!-- Fith row buttons -->
-                <Button Text="=" Clicked="CalculateWhenClicked" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" BackgroundColor="#D88D0E" />
-            </Grid>
-        </Frame>
+                    <!-- Fith row buttons -->
+                    <Button x:Name="btnRes" Text="=" Clicked="CalculateWhenClicked" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" BackgroundColor="#D88D0E" />
+                </Grid>
+            </Frame>
             <Slider HeightRequest="30" 
                     WidthRequest="200"
                     Grid.Row="1" 
@@ -70,6 +74,7 @@
                     ValueChanged="Slider_ScaleValue" 
                     ThumbColor="#7D2AD3"
                     Grid.RowSpan="1" 
-                    Scale="1"/>        
+                    Scale="1"/>
         </Grid>
+    </StackLayout>
 </ContentPage>
