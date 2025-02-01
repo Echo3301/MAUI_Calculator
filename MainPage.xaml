@@ -31,7 +31,7 @@
                        HorizontalTextAlignment="End" 
                        VerticalTextAlignment="Center" 
                        FontSize="22" 
-                       FontFamily="Digital-7"
+                       FontFamily="GruppoRegular"
                        IsReadOnly="True" 
                        TextColor="Black" Background="#A1C3E3" MaximumHeightRequest="45" />
 
