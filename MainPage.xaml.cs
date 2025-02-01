@@ -143,6 +143,11 @@ namespace MAUICalculator
             btnC.BackgroundColor = btnCC;
 
         }
+        private void Slider_RotateValue(object sender, ValueChangedEventArgs e)
+        {
+            double rotationScale = e.NewValue;
+            CalculatorFrame.Rotation = rotationScale;
+        }
         private void Slider_ScaleValue(object sender, ValueChangedEventArgs e)
         {
             double scale = e.NewValue;
